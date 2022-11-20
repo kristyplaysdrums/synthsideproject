@@ -1,0 +1,4 @@
+baseURL = "http://thecuteaf.com"
+languageCode = "en-us"
+title = "Synth Side Project"
+theme = "vicesinc"

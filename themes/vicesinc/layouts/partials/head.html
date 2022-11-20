@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+<meta content="{{ if (isset .Params "og_description") }}{{ .Params.og_description }}{{ else }}Welcome to the Vices Inc. official website. Vices Inc. is a pop punk / alternative rock band located in Portland Maine. {{ end }}" name="description">
+<meta content="{{ if (isset .Params "meta_keywords") }}{{ .Params.meta_keywords }}{{ else }}vices inc, vices incorporated, rock, alternative rock, pop punk, maine band, east coast band, new england band, vices inc, live band{{end}}" name="keywords">
+<meta content="{{ if (isset .Params "og_title") }} {{ .Params.og_title }}{{ else }}{{ .Title }}{{ end }}" property="og:title">
+<meta content="{{ .Site.Title }}" property="og:site_name">
+<meta content="{{ .Params.og_url }}" property="og:url">
+<meta content="{{ if (isset .Params "og_description") }}{{ .Params.og_description }}{{ else }}Vices Inc. is a pop punk / alternative rock band located in Portland Maine. {{ end }}" property="og:description">
+<meta content="{{ if (isset .Params "og_image") }}{{ .Params.og_image }}{{ else }}/images/logo.jpg{{ end }}" property="og:image">
+<meta content="website" property="og:type">
+<link rel="stylesheet" href="/css/normalize.css" media="screen">
+<link rel="stylesheet" href="/css/styles.css" media="screen">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Raleway:400,400i,600&display=swap" rel="stylesheet">

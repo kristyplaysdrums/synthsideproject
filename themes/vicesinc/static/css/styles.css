@@ -1,0 +1,417 @@
+/* GLOBAL */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #000101;
+  color: #f0f0f0;
+  font-family: 'Raleway', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: #f0f0f0;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+}
+@media (min-width: 900px) {
+  .header {
+    padding: 0;
+  }
+}
+
+.header:after {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+  content: '';
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-wrap {
+  background-color: #000101;
+}
+@media (min-width: 900px) {
+  .menu-wrap {
+    position: relative;
+    z-index: 10;
+  }
+  .menu-container {
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-right: 16px;
+}
+
+@media (max-width: 899px) {
+  .main-menu {
+    display: none;
+  }
+}
+
+.main-menu li {
+  font-weight: bold;
+  margin-right: 48px;
+  text-transform: uppercase;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .3s ease;
+}
+
+.menu a:hover {
+  opacity: .7;
+}
+
+.menu svg {
+  width: 28px;
+  height: auto;
+  fill: #fff;
+}
+
+.logo {
+  display: block;
+}
+
+.logo svg {
+  width: 40px;
+  display: block;
+}
+
+.hero {
+  height: auto;
+  width: 100%;
+}
+/* GENERIC SECTIONS */
+
+.section-heading {
+  font-size: 24px;
+  padding-bottom: 12px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section-heading:after {
+  bottom: 0;
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  margin-left: -20px;
+}
+@media (min-width: 900px) {
+  .section-heading {
+    font-size: 32px;
+  }
+}
+
+/* SHOWS */
+
+.shows-wrap {
+  margin: 0 -10px;
+}
+
+/* ABOUT */
+
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px 0;
+}
+
+.band-member {
+  max-width: 240px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: transform .3s ease;
+  width: 200px;
+}
+.band-member:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 760px) {
+  .band-member {
+    width: 240px;
+  }
+}
+@media (min-width: 960px) {
+  .band-member {
+    flex: 1;
+    width: auto;
+  }
+}
+
+.band-member-image {
+  border-radius: 50%;
+}
+
+.band-member-name {
+  margin: 12px 0 6px;
+  position: relative;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+.band-member-name:after {
+  bottom: 0;
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin-left: -15px;
+}
+
+.band-member-role {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 12px 0 0;
+}
+
+/* MUSIC */
+
+.single {
+  margin: 0 16px; 
+  max-width: 500px;
+}
+
+.single-art {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.single-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0 60px;
+}
+
+@media (min-width: 768px) {
+  .album-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .album {
+    width: 348px;
+  }
+}
+
+.album {
+  padding: 0 24px 24px;
+}
+
+.album:last-child {
+  padding: 0 24px;
+}
+
+.album-art {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #777;
+}
+
+.album-art svg {
+  display: block;
+  fill: #fff;
+  height: auto;
+  padding: 24px;
+  width: 100%;
+}
+
+.album-title {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+.album-info {
+  margin: 6px 0 8px;
+  text-align: center;
+}
+
+.album-price {
+  font-size: 22px;
+  margin: 8px 0 16px;
+}
+
+.album-buy-button {
+  border: 2px solid #f0f0f0;
+  display: inline-block;
+  color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin: 0 0 16px;
+  padding: 16px;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.album-buy-button.full {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.album-buy-button:hover {
+  background-color: #f0f0f0;
+  color: #000101; 
+}
+
+/* MERCH */
+
+.merch-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.merch-item {
+  padding: 0 16px 24px;
+  width: 232px;
+}
+
+.merch-image {
+  display: block;
+  width: 100%;
+}
+
+.merch-name {
+  margin: 16px 0 0;
+  text-align: center;
+}
+
+/* CONTACT */
+
+.contact-text {
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.contact-form {
+  display: block;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
+.contact-fieldset {
+  border: none;
+  display: block;
+  margin: 0 0 14px;
+  padding: 0;
+}
+
+.contact-label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.contact-input {
+  border: 1px solid #000;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 8px 10px;
+  resize: none;
+  width: 100%;
+}
+
+.contact-textarea {
+  height: 200px;
+}
+
+.contact-submit {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 2px;
+  color: #000;
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+.contact-submit:hover {
+  background-color: #eee;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+}
+
+.footer .menu {
+  justify-content: center;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  margin-top: 30px;
+}
